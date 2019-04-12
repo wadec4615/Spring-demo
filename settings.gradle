@@ -3,3 +3,4 @@ include 'Hello-World-Micronaut',
 'Hello-World-Spring'
 		
 include 'Hello-World-Micronaut-SQL'
+include 'Hello-World-Spring-SQL'
