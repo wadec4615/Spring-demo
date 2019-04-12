@@ -63,6 +63,6 @@ shadowJar {
 
 run.jvmArgs('-noverify', '-XX:TieredStopAtLevel=1')
 
-mainClassName = "com.wade.demo.bootrest.SpringBootRestApplication"
+mainClassName = "com.baeldung.crud.Application"
 compileJava.options.compilerArgs += '-parameters'
 compileTestJava.options.compilerArgs += '-parameters'
