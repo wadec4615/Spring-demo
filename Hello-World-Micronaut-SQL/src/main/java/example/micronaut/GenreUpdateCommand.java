@@ -2,7 +2,6 @@ package example.micronaut;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.util.Objects;
 
 public class GenreUpdateCommand {
     @NotNull

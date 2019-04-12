@@ -1,11 +1,12 @@
 package example.micronaut;
 
-import example.micronaut.domain.Genre;
+import java.util.List;
+import java.util.Optional;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Optional;
+
+import example.micronaut.domain.Genre;
 
 public interface GenreRepository {
 
