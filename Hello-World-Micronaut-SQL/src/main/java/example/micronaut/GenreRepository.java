@@ -1,9 +1,10 @@
 package example.micronaut;
 
-import example.micronaut.domain.Genre;
-
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+
+import example.micronaut.domain.Genre;
+
 import java.util.List;
 import java.util.Optional;
 

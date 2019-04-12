@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import static org.hamcrest.Matchers.hasProperty;
 import static org.hamcrest.Matchers.is;
-import example.micronaut.domain.Genre;
+
 import io.micronaut.context.ApplicationContext;
 import io.micronaut.core.type.Argument;
 import io.micronaut.http.HttpHeaders;
@@ -19,6 +19,10 @@ import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+
+import example.micronaut.GenreSaveCommand;
+import example.micronaut.GenreUpdateCommand;
+import example.micronaut.domain.Genre;
 
 import java.util.ArrayList;
 import java.util.List;

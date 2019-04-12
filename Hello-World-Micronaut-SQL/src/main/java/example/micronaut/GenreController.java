@@ -1,6 +1,5 @@
 package example.micronaut;
 
-import example.micronaut.domain.Genre;
 import io.micronaut.http.HttpHeaders;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Body;
@@ -12,6 +11,9 @@ import io.micronaut.http.annotation.Put;
 import io.micronaut.validation.Validated;
 
 import javax.validation.Valid;
+
+import example.micronaut.domain.Genre;
+
 import java.net.URI;
 import java.util.List;
 
