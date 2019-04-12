@@ -17,7 +17,7 @@ buildscript {
 }
 
 version "0.1"
-group "example"
+group "com.wade.demo.rest.micronaut"
 
 apply plugin:"io.spring.dependency-management"
 apply plugin:"com.github.johnrengelman.shadow"
@@ -67,6 +67,6 @@ test {
 
 run.jvmArgs('-noverify', '-XX:TieredStopAtLevel=1')
 
-mainClassName = "example.Application"
+mainClassName = "com.wade.demo.rest.micronaut.Application"
 compileJava.options.compilerArgs += '-parameters'
 compileTestJava.options.compilerArgs += '-parameters'

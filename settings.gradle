@@ -1,6 +1,2 @@
 
-include 'Hello-World-Micronaut',
-'Hello-World-Spring'
-		
-include 'Hello-World-Micronaut-SQL'
-include 'Hello-World-Spring-SQL'
+include 'Hello-World-Micronaut','Hello-World-Spring','Hello-World-Micronaut-SQL','Hello-World-Spring-SQL'
