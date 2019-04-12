@@ -1,10 +1,5 @@
 package example.micronaut;
 
-import java.net.URI;
-import java.util.List;
-
-import javax.validation.Valid;
-
 import example.micronaut.domain.Genre;
 import io.micronaut.http.HttpHeaders;
 import io.micronaut.http.HttpResponse;
@@ -15,6 +10,10 @@ import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Post;
 import io.micronaut.http.annotation.Put;
 import io.micronaut.validation.Validated;
+
+import javax.validation.Valid;
+import java.net.URI;
+import java.util.List;
 
 @Validated // <1>
 @Controller("/genres") // <2>

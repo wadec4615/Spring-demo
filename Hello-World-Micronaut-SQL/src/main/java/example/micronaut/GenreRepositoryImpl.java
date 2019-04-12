@@ -1,8 +1,8 @@
 package example.micronaut;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import example.micronaut.domain.Genre;
+import io.micronaut.configuration.hibernate.jpa.scope.CurrentSession;
+import io.micronaut.spring.tx.annotation.Transactional;
 
 import javax.inject.Singleton;
 import javax.persistence.EntityManager;
@@ -10,10 +10,9 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-
-import example.micronaut.domain.Genre;
-import io.micronaut.configuration.hibernate.jpa.scope.CurrentSession;
-import io.micronaut.spring.tx.annotation.Transactional;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
 
 @Singleton // <1>
 public class GenreRepositoryImpl implements GenreRepository {
