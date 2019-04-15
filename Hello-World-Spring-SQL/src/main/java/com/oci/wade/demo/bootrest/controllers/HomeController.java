@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/greeting")
 public class HomeController {
-	@GetMapping(value = "/{name}")
-	public ResponseEntity<String> getGreeting(@PathVariable("name") String name) {
-		return ResponseEntity.ok().body("Hello " + name);
-	}
+    @GetMapping(value = "/{name}")
+    public ResponseEntity<String> getGreeting(@PathVariable("name") String name) {
+        return ResponseEntity.ok().body("Hello " + name);
+    }
 }

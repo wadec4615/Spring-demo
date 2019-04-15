@@ -16,15 +16,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Component
 public class ErrorController extends BasicErrorController {
 
-	public ErrorController(ErrorAttributes errorAttributes) {
-		super(errorAttributes, new ErrorProperties());
-	}
+    public ErrorController(ErrorAttributes errorAttributes) {
+        super(errorAttributes, new ErrorProperties());
+    }
 
-	@RequestMapping(produces = MediaType.APPLICATION_XML_VALUE)
-	public ResponseEntity<Map<String, Object>> xmlError(HttpServletRequest request) {
-		Map<String, Object> body = getErrorAttributes(request, isIncludeStackTrace(request, MediaType.APPLICATION_XML));
-		body.put("xmlkey", "the XML response is different!");
-		HttpStatus status = getStatus(request);
-		return new ResponseEntity<>(body, status);
-	}
+    @RequestMapping(produces = MediaType.APPLICATION_XML_VALUE)
+    public ResponseEntity<Map<String, Object>> xmlError(HttpServletRequest request) {
+        Map<String, Object> body = getErrorAttributes(request, isIncludeStackTrace(request, MediaType.APPLICATION_XML));
+        body.put("xmlkey", "the XML response is different!");
+        HttpStatus status = getStatus(request);
+        return new ResponseEntity<>(body, status);
+    }
 }
