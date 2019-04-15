@@ -27,7 +27,7 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin:"application"
 apply plugin:"java"
 
-group "com.wade.demo.bootrest"
+group "com.wade.demo.bootrest.sql"
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -36,24 +36,18 @@ repositories {
 }
 
 dependencies {
-  implementation 'org.springframework.boot:spring-boot-starter'
+  implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+  implementation 'org.springframework.boot:spring-boot-starter-web'
+  runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+  runtimeOnly 'mysql:mysql-connector-java'
   testImplementation 'org.springframework.boot:spring-boot-starter-test'
-  compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.4.RELEASE'
-  compile group: 'org.springframework.boot', name: 'spring-boot-starter-tomcat', version: '2.1.4.RELEASE'
-  compile group: 'org.springframework.restdocs', name: 'spring-restdocs-mockmvc', version: '2.0.3.RELEASE'
-  compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.9.8'
-  compile group: 'org.springframework', name: 'spring-oxm', version: '5.1.6.RELEASE'
-  compile group: 'com.thoughtworks.xstream', name: 'xstream', version: '1.4.11.1'
-  compile group: 'com.h2database', name: 'h2', version: '1.4.199'
-  compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.1.4.RELEASE'
-  compile group: 'com.google.guava', name: 'guava', version: '27.0.1-jre'
   compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
   compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
-  testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.4.RELEASE'
-  configurations.testCompile.exclude(group: 'junit', module: 'junit')
-  testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.3.2'
-  testCompile group: 'org.mockito', name: 'mockito-core', version: '2.27.0'
-  testCompile group: 'org.mockito', name: 'mockito-junit-jupiter', version: '2.27.0'
+//  testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.4.RELEASE'
+//  configurations.testCompile.exclude(group: 'junit', module: 'junit')
+//  testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.3.2'
+//  testCompile group: 'org.mockito', name: 'mockito-core', version: '2.27.0'
+//  testCompile group: 'org.mockito', name: 'mockito-junit-jupiter', version: '2.27.0'
 }
 
 shadowJar {
@@ -63,6 +57,6 @@ shadowJar {
 
 run.jvmArgs('-noverify', '-XX:TieredStopAtLevel=1')
 
-mainClassName = "com.oci.wade.demo.bootrest.SpringBootRestApplication"
+mainClassName = "com.wade.demo.bootrest.sql.EasyNotesApplication"
 compileJava.options.compilerArgs += '-parameters'
 compileTestJava.options.compilerArgs += '-parameters'
