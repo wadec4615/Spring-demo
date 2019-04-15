@@ -1,4 +1,4 @@
-package com.wade.demo.bootrest.sql;
+package com.wade.demo.bootrest.sql.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

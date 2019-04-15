@@ -27,7 +27,7 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin:"application"
 apply plugin:"java"
 
-group "com.wade.demo.bootrest.sql"
+group = 'com.wade.demo.bootrest.sql'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -36,27 +36,20 @@ repositories {
 }
 
 dependencies {
-  implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-  implementation 'org.springframework.boot:spring-boot-starter-web'
-  runtimeOnly 'org.springframework.boot:spring-boot-devtools'
-  runtimeOnly 'mysql:mysql-connector-java'
-  testImplementation 'org.springframework.boot:spring-boot-starter-test'
-  compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
-  compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
-//  testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.4.RELEASE'
-//  configurations.testCompile.exclude(group: 'junit', module: 'junit')
-//  testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.3.2'
-//  testCompile group: 'org.mockito', name: 'mockito-core', version: '2.27.0'
-//  testCompile group: 'org.mockito', name: 'mockito-junit-jupiter', version: '2.27.0'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'mysql:mysql-connector-java'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testCompile 'org.mockito:mockito-all:1.9.5'
 }
 
 shadowJar {
     mergeServiceFiles()
 }
 
-
 run.jvmArgs('-noverify', '-XX:TieredStopAtLevel=1')
 
-mainClassName = "com.wade.demo.bootrest.sql.EasyNotesApplication"
+mainClassName = "com.wade.demo.bootrest.HelloWorldSpringSqlApplication"
 compileJava.options.compilerArgs += '-parameters'
 compileTestJava.options.compilerArgs += '-parameters'

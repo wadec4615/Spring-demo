@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wade.demo.bootrest.sql.ResourceNotFoundException;
+import com.wade.demo.bootrest.sql.exception.ResourceNotFoundException;
 import com.wade.demo.bootrest.sql.model.Note;
 import com.wade.demo.bootrest.sql.repository.NoteRepository;
 
